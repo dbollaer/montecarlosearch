@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "montecarlosearch",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Combined wiki search",
+    "description": "The description of the application"
+  }
+}

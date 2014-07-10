@@ -55,7 +55,7 @@ function onText(data) {
     //for (var id in data.results) {
       for (var i=0,result; result = data.results[i]; i++) {
         var link_dom = document.createElement('a');
-        link_dom.setAttribute('href', "https://wiki.ugent.be" + result.searchResultContainer.url);
+        link_dom.setAttribute('href', "https://wiki.ugent.be" + result.url);
 
         link_dom.innerHTML =  '<p>'+ cleanUpString(result.title) + ':' + cleanUpString(result.bodyTextHighlights) + '</p>';
         link_dom.style.color = '#000';

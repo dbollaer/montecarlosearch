@@ -93,7 +93,8 @@ $(document).bind('DOMNodeInserted', function(e) {
 
 
 function reloadResults() {
-    var innersearch = $("input[name=q]:first").val();
+    search = $("input[name=q]:first").val();
+
     if ($('#google_search_tab').length == 0) {
          var addGoogleSearchTabe = $("<div  id='google_search_tab'  class='col' style='width: 456px; height: 263px;display: block;margin-left: 712px;'></div>")
         $("#rhscol").after(addGoogleSearchTabe);
@@ -103,10 +104,7 @@ function reloadResults() {
          fetchTwitterFeed(onText);
         
     }
-    search = innersearch;
     console.log("reloaded");
-    console.log(innersearch);
-
 }
 
 

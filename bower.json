@@ -1,6 +1,11 @@
 {
   "name": "montecarlosearch",
-  "version": "0.0.0",
-  "dependencies": {},
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.0.3",
+    "modernizr": "~2.6.2",
+    "jquery": "~1.10.2"
+  },
   "devDependencies": {}
 }

@@ -75,7 +75,7 @@ function fetchJiraFeed(callback,elementId) {
  */
 function onText(data,elementId) {
   // Only render the bar if the data is parsed into a format we recognize.
-  if (data.results) {
+  if (data !== null && data.results) {
     // Create the overlay at the top of the page and fill it with data.
 
     var results_dom = document.getElementById(elementId);
@@ -103,7 +103,7 @@ function onText(data,elementId) {
  */
 function onTextJira(data,elementId) {
   // Only render the bar if the data is parsed into a format we recognize.
-  if (data.issues) {
+  if (data !== null && data.issues) {
     // Create the overlay at the top of the page and fill it with data.
 
     var results_dom = document.getElementById(elementId);
@@ -156,9 +156,10 @@ function reloadResults() {
 
     search = $("input[name=q]:first").val();
     reloadResult('google_search_tab2');
-    fetchJiraFeed(onTextJira, 'google_search_tab2' );
 
     fetchTwitterFeed(onText, 'google_search_tab2');
+    fetchJiraFeed(onTextJira, 'google_search_tab2' );
+
   /**  if ($('#google_search_tab').length == 0) {
          var addGoogleSearchTabe = $("<div  id='google_search_tab'  class='col' style='width: 456px; height: 263px;display: block;margin-left: 712px;'></div>")
         $("#rhscol").after(addGoogleSearchTabe);
